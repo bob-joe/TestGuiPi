@@ -3,7 +3,7 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 
-SERVO_PIN = 26  # change if needed
+SERVO_PIN = 13  # change if needed
 
 GPIO.setup(SERVO_PIN, GPIO.OUT)
 
@@ -27,20 +27,7 @@ def sweep(speed_delay):
 
 try:
     while True:
-        print("Slow sweep")
-        sweep(0.03)   # slow
-
-        time.sleep(1)
-
-        print("Medium sweep")
-        sweep(0.01)   # medium
-
-        time.sleep(1)
-
-        print("Fast sweep")
-        sweep(0.003)  # fast
-
-        time.sleep(1)
+        sweep(0)
 
 except KeyboardInterrupt:
     pwm.stop()
