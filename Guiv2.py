@@ -14,6 +14,8 @@ class RecyclerGUI:
         self.root.geometry("700x520")
         self.root.configure(bg="#1e1e2e")
         self.root.resizable(True, True)
+        self.root.attributes('-fullscreen', True)
+
 
         self.status_text = tk.StringVar(value="Idle")
         self.timer_text  = tk.StringVar(value="00:00")
